@@ -4,14 +4,14 @@
 
 
 int top=-1;
-char s[20]
-char infix[20]
-char postfix[20]
-void inf_to_post()
-int sp(char)
-int ip(char)
-void push(char)
-char pop()
+char s[20];
+char infix[20];
+char postfix[20];
+void inf_to_post();
+int sp(char);
+int ip(char);
+void push(char);
+char pop();
 
 
 
@@ -89,7 +89,7 @@ while(sp(s[top])>ip(symbol))
     j++;
 }
 
-if(sp(s[top])<ip(symbol)))
+if(sp(s[top])<ip(symbol))
 {
     push(symbol);
 }
