@@ -83,13 +83,13 @@ for(i=0;i<strlen(infix);i++)
 {
     symbol=infix[i];
     
-while(sp(s[top])&gt;ip(symbol))
+while(sp(s[top])>ip(symbol))
 {
     postfix[j]=pop();
     j++;
 }
 
-if(sp(s[top]&lt;ip(symbol)))
+if(sp(s[top])<ip(symbol)))
 {
     push(symbol);
 }
@@ -101,10 +101,10 @@ if(sp(s[top])==ip(symbol))
 }
 
 
-while(s[top]!=&#39;#&#39;)
+while(s[top]!='#')
 {
     postfix[j]=pop();
     j++;
 }
-    postfix[j]=&#39;\0&#39;;
+    postfix[j]='\0';
 }
