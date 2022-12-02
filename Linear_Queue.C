@@ -57,7 +57,7 @@ void enqueue()
  
 void dequeue()
 {
-    if (Front == - 1 || Front > Rear)
+    if ((Front == - 1) || (Front > Rear))
     {
         printf("Underflow \n");
         return ;
