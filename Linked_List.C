@@ -132,6 +132,35 @@ NODE delete_end(NODE first)
     return(first);
 }
 
+
+
+void insert_at_any_position(int item, int position, NODE first)
+{
+    NODE temp, newnode;
+    newnode = getnode();
+    int i = 1;
+    temp = first;
+    (newnode->value) = item;
+    (newnode->next) = NULL;
+    while (i < (position - 1))
+    {
+        temp = temp->next;
+        i++;
+    }
+    newnode->next = temp->next;
+    temp->next = newnode;
+
+
+
+
+
+}
+
+
+
+
+
+
 //For displaying-
 
 void display(NODE first)
@@ -146,6 +175,7 @@ void display(NODE first)
         temp=temp->next;
     }
 }
+
 
 int main()
 {
@@ -177,6 +207,13 @@ int main()
         case 5:
             first = delete_end(first);
             printf("Item has been removed from the last node.");
+            break;
+        case 6:
+            printf("Enter the element to be inserted : ");
+            scanf("%d", &pos);
+            printf("Enter the element to be inserted : ");
+            scanf("%d", &x);
+            insert_at_any_position(pos, x, first);
             break;
 
         default:
